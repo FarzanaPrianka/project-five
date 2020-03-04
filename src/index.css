@@ -1,57 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-body {
+* {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
   background: #F3F3F3;
 }
 
-main {
-  padding: 15px;
-}
+/* header styling */
 
-/*
-** HEADER 
-*/
 .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   width: 100vw;
-  height: 60px;
-  background: #171717;
+  background: linear-gradient(to right, #DD2476, #FF512F);
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+  color: #F3F3F3;
+  font-family: 'Montserrat', sans-serif
 }
 
 .header .title {
-  color: #FFCE00;
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 900;
+  text-transform: uppercase;
+  padding: 25px 0;
+  color: gold;
+}
+
+.header p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+  padding: 20px 15px 25px;
   text-transform: uppercase;
 }
 
-.header .title span {
-  color: #F3F3F3;
-  font-weight: 300;
-}
-
+/* BirthdayLogForm styling */
 
 .birthdayLogForm {
   display: block;
@@ -60,29 +48,63 @@ main {
   margin: 0 auto 15px;
 }
 
-.birthdayLogForm h3 {
-  color: #171717;
-}
-
 .birthdayLogForm .form-group {
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
 }
 
-.birthdayLogs {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 15px;
+label {
+  color:#DD2476;
+  padding: 20px 0;
+  text-align: center;
+}
+
+input{
+  padding: 15px 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+button {
+  display: inline-block;
+  width: 150px;
   padding: 15px;
+  background-color:#FF512F;
+  border: none;
+  color: #F3F3F3;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+main {
+  padding: 15px;
+} 
+
+/* styling the birthday logs */
+
+.birthdayLogs {
+  
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  
 }
 .birthdayLogs .birthdayLog {
   background: #FFFFFF;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+  width: 30%;
+  margin: 10px;
 }
 
 .birthdayLogs .birthdayLog .birthdayLog-person {
-  background: #171717;
+
+  background: linear-gradient(to right,#757F9A,#D7DDE8 );
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -94,9 +116,6 @@ main {
   margin: 0;
   padding: 0;
 }
-
-
-
 
 .birthdayLogs .birthdayLog .birthdayLog-person .remove {
   color: #FF0000;
@@ -112,8 +131,21 @@ main {
   color:black;
 }
 
-@media screen and (min-width: 768px) {
-  .birthdayLog {
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width: 768px) {
+
+  .birthdayLogs .birthdayLog {
+    width: 45%;
   }
-} 
+}
+
+@media (max-width: 500px) {
+
+  .birthdayLogs .birthdayLog {
+    width: 98%;
+  }
+}
+
+
+
+
+

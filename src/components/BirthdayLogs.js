@@ -14,7 +14,6 @@ class BirthdayLogs extends Component {
     render() {
         return (
             <section className="birthdayLogs-wrapper">
-                <h3>BirthdayLogs</h3>
                 <div className="birthdayLogs">
                     {this.props.birthdayLogs.map(birthdayLog => (
                         <div className="birthdayLog" key={birthdayLog.id}>
